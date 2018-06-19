@@ -1,0 +1,453 @@
+/*--------------------------------------------------------------
+| Table of Contents
+|
+| 01.00   Typography
+|
+| 02.00   Forms
+|
+| 03.00   Links
+|
+| 04.00   Wordpress Alignments
+|
+| 05.00   Comments
+|
+| 06.00   Captions
+|
+| 07.00   Sidebar
+|
+| 08.00   Meta
+|
+| 09.00   Butter Pages Footer
+|
+| 10.00   Menu
+--------------------------------------------------------------*/
+
+@import "font-pack-1";
+@import "test_colors";
+
+/*--------------------------------------------------------------
+| 1.0 - Typography
+--------------------------------------------------------------*/
+
+h1 {
+  font-family: $font1;
+  color: $color1;
+}
+h2 {
+  font-family: $font2;
+  color: $color1;
+}
+
+h3 {
+  font-family: $font3;
+  color: $color1;
+}
+
+h4 {
+  font-family: $font1;
+  color: $color3;
+}
+
+h5 {
+  font-family: $font1;
+  color: $color3;
+}
+
+h6 {
+  font-family: $font1;
+  color: $color3;
+}
+
+
+hr {
+  color: $color1 !important;
+}
+
+.backgroundcolor {
+  background-color: $color4;
+}
+
+p,
+pre,
+code,
+kbd,
+tt,
+var,
+abbr,
+acronym,
+address,
+mark,
+ins,
+dfn,
+cite{
+  font-family: $font1;
+  color: $color1;
+}
+
+em,
+i
+{
+  font-family: $font1;
+  color: $color1;
+}
+
+b,
+strong {
+  font-family: inherit;
+  color: $color1;
+}
+
+
+blockquote {
+  font-family: inherit;
+  color: $color1;
+}
+
+
+sup,
+sub {
+  font-family: $font1;
+  position: relative;
+  vertical-align: baseline;
+  color: $color1;
+}
+
+sup {
+  font-family: inherit;
+  color: $color1;
+}
+
+sub {
+  font-family: inherit;
+  color: $color1;
+}
+
+small {
+  font-family: inherit;
+  color: $color1;
+}
+
+big {
+  font-family: inherit;
+  color: $color1;
+}
+
+/*--------------------------------------------------------------
+| 2.0 Forms
+--------------------------------------------------------------*/
+button,
+.button,
+input,
+select,
+textarea {
+  color: $color1;
+  background-color: $color4;
+  font-family: $font2;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: $color1;
+  background-color: $color4;
+  font-family: $font2;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: $color1;
+  color: $color4;
+  font-family: $font2;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  color: $color1;
+  font-family: $font2;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0; /* Addresses excess padding in IE8/9 */
+  color: $color1;
+  font-family: $font2;
+}
+
+input[type="search"] {
+  background-color: $color4;
+  font-family: $font2;
+}
+
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  background-color: $color4;
+  font-family: $font2;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  color: $color1;
+  font-family: $font2;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  background-color: $color4;
+  color: $color1;
+  font-family: $font2;
+}
+
+
+/*--------------------------------------------------------------
+| 3.0 Links
+--------------------------------------------------------------*/
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  font-family: $font1;
+  color: $color3;
+}
+
+/*--------------------------------------------------------------
+| 4.0 Wordpress Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+| 5.0 Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  color: $color1;
+  font-family: $font2;
+}
+
+.bypostauthor {
+  color: $color1;
+  font-family: $font2;
+}
+
+#comment {
+  background-color: $color4;
+  font-family: $font2;
+}
+
+#submit {
+  background-color: $color4;
+  color: $color1;
+  font-family: $font2;
+}
+
+.comment-metadata, .comment-metadata a, .comment-content,.comment-author, .fn, .comment-form-author {
+  color: $color1;
+  font-family: $font2;
+}
+
+/*--------------------------------------------------------------
+| 6.0 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  font-family: $font1;
+  color: $color2;
+  background-color: $color4;
+}
+
+.wp-caption-text {
+  color: $color1;
+  font-family: $font1;
+}
+
+ul li {
+  color: $color1;
+  font-family: $font2;
+}
+ol li {
+  color: $color1;
+  font-family: $font2;
+}
+th, thead {
+  color: $color1;
+  font-family: $font2;
+}
+td {
+  color: $color1;
+  font-family: $font2;
+}
+
+/*--------------------------------------------------------------
+| 7.0 Sidebar
+--------------------------------------------------------------*/
+
+.widget-area, .input.search-field {
+  background-color:  $color4;
+  font-family: $font2;
+}
+
+.widget_recent_entries ul , .widget_recent_entries a, .widget-title {
+  color: $color2;
+  font-family: $font2;
+}
+
+/*--------------------------------------------------------------
+|8.0 Meta
+--------------------------------------------------------------*/
+
+.post-date {
+  font-family: $font1;
+  color: $color1;
+}
+
+.icons, [class^="fi-"], [class^="fi "] {
+  color: $color3 !important;
+}
+
+/*--------------------------------------------------------------
+| 9.0 BUTTER PAGES FOOTER
+--------------------------------------------------------------*/
+
+.butter-pages-footer,
+.butter-pages-footer a {
+  font-size: em-calc(15);
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  color: #ffffff; /* @TODO Change to color variable */
+}
+
+/*--------------------------------------------------------------
+| Menu
+--------------------------------------------------------------*/
+/*  Main Menu
+--------------------------------------------------------------*/
+.menu {
+  li {
+  }
+}
+.menu-item, .current-menu-item, .current_page_item {
+  font-family: $font2;
+}
+
+/*  Sub-Menu
+--------------------------------------------------------------*/
+.sub-menu, .menu-item, .current-menu-item, .current_page_item {
+  font-family: $font2;
+}
+/*-------------------------------------
+| Navigation
+-------------------------------------*/
+/* Original Son of Suckerfish Styles */
+.menu-main-menu-container{
+
+}
+.menu-main-menu-container, .menu-main-menu-container ul {
+}
+
+.menu-main-menu-container a {
+
+}
+.menu-main-menu-container li {
+
+}
+.menu-main-menu-container li ul {
+
+}
+
+.menu-main-menu-container li:hover ul {
+
+}
+
+/* Style Overrides for Fluid-width Dropdowns */
+.menu-main-menu-container a, .menu-main-menu-container li, .menu-main-menu-container li ul {
+
+}
+.menu-main-menu-container li {
+
+}
+.menu-main-menu-container li li {
+
+}
+.menu-main-menu-container li ul {
+
+}
+.menu-main-menu-container li ul li {
+//  background-color: $color2;
+}
+.inner-wrap {
+  // Control Height of Sidebar Menu
+
+}
+
+/* Vertical Menu Container
+===========================*/
+.vertical-menu-container, .menu-main-menu-container ul {
+
+}
+
+.vertical-menu-container a {
+
+}
+
+.vertical-menu-container li ul {
+
+}
+
+/* Style Overrides for Fluid-width Dropdowns */
+.vertical-menu-container a, .vertical-menu-container li, .vertical-menu-container li ul {
+
+}
+.vertical-menu-container li {
+
+}
+.vertical-menu-container li li {
+
+}
+.vertical-menu-container li ul {
+
+}
+.vertical-menu-container li ul li {
+  background-color: $color2;
+}
+#accordion.vertical-menu-container {
+
+}
+/*------------------------------*/
+
+.inner-wrap {
+  // Control Height of Sidebar Menu
+  height: 100%;
+}
+
+.active {
+  // border-bottom: 2px solid black; {ONLY IF YOU WANT BOTTOM LINE ON ACTIVE NAV PIECES!}
+}

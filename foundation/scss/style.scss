@@ -1,0 +1,1067 @@
+/*--------------------------------------------------------------
+| TABLE OF CONTENTS: To be Updated Based on use!!!
+----------------------------------------------------------------
+01.00 - Imports
+02.00 - Base Definitions
+  02.10 - Typography
+  02.20 - Forms
+  02.30 - Links
+  02.40 - Wordpress Alignments
+  02.50 - Comments
+  02.60 - Captions
+  02.70 - Sidebar
+  02.80 - Meta
+03.00 - Header
+04.00 - Navigation
+05.00 - Site Wide Elements
+06.00 - Splash
+07.00 - Home
+08.00 - Info Page A
+09.00 - Info Page B
+10.00 - Feeder Page
+11.00 - Listings Page
+12.00 - Blog Feeder
+  12.10 - Sidebar
+13.00 - Single
+  13.10 - Comments
+  13.20 - Sidebar
+14.00 - Form
+15.00 - Gallery
+16.00 - Footer
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+| 01.00 SCSS Imports
+--------------------------------------------------------------*/
+@import "settings";
+@import "../bower_components/foundation/scss/foundation";
+@import "base-definitions";
+/*--------------------------------------------------------------
+| 02.00 Site Wide Definition
+|   All classes prefixed with .swe-
+--------------------------------------------------------------*/
+
+body {
+  background-color: $color4;
+  height: auto;
+  min-height:100%;
+  @media #{$medium-up} {
+    border: 20px solid white;
+  }
+}
+
+#page {
+  @media #{$small-only} {
+    height: auto !important;
+    text-align: center;
+  }
+}
+
+.row {
+  max-width: 100%;
+}
+
+.spl-logo {
+  img {
+    max-width: 225px;
+    @media #{$small-only} {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+.swe-logo {
+  img {
+    margin-top: 0.25em;
+    max-width: 225px;
+    @media #{$small-only} {
+      max-width: 105px;
+      margin-top: -2em;
+    }
+  }
+}
+
+.swe-margin-top-1 {
+  margin-top: 1em !important;
+}
+
+.swe-margin-top-2 {
+  margin-top: 2em !important;
+}
+
+.swe-margin-top-5 {
+  margin-top: 5em !important;
+}
+
+.swe-margin-bottom-2 {
+  margin-bottom: 2em !important;
+}
+
+.swe-signup {
+  width: 25%;
+  position: absolute;
+  top: 2.25em;
+  right: -5em;
+}
+
+.events {
+  position: absolute;
+  top: 1.75em;
+  left: -8.75em;
+
+  a {
+    font-style: normal !important;
+    font-size: em-calc(20);
+  }
+}
+
+.firstWord h1, .firstWord h2 {
+  display: inline-block;
+}
+
+.firstWord h1 {
+  font-size: em-calc(35);
+}
+
+.firstWord h2 {
+  font-size: em-calc(35);
+}
+
+.ginput_container_email {
+  ::-webkit-input-placeholder { /* Chrome */
+    font: $font1 !important;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font: $font1 !important;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font: $font1 !important;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    font: $font1 !important;
+  }
+}
+
+.main-row {
+  @media (min-width:1025px) and (max-width: 1395px) {
+    padding: 0 !important;
+  }
+  @media #{$small-only} {
+    padding: 0 !important;
+  }
+
+
+  ::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar
+  {
+    width: 6px;
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    background-color: $color1 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+| 02.01 Typography
+--------------------------------------------------------------*/
+
+h1 {
+  font-style: normal;
+  font-size: em-calc(24);
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  @media #{$small-only} {
+    font-size: em-calc(20);
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-size: em-calc(23);
+  text-transform: lowercase;
+  margin-bottom: 0 !important;
+  letter-spacing: 1px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+h3 {
+  font-style: normal;
+  font-size: em-calc(18);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-style: normal;
+}
+
+h5 {
+  font-style: normal;
+}
+
+h6 {
+  font-style: normal;
+}
+
+p,
+pre,
+code,
+kbd,
+tt,
+var,
+abbr,
+acronym,
+address,
+mark,
+ins,
+dfn,
+cite{
+  font-family: $font2 !important;
+  font-size: em-calc(15);
+  color: $color3;
+  font-weight: 200;
+}
+
+em,
+i
+{
+  font-style: italic;
+}
+
+b,
+strong {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+
+blockquote {
+  font-family: inherit;
+  margin: 0 1.5em;
+}
+
+
+sup,
+sub {
+  font-style: normal;
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-family: inherit;
+  bottom: 1ex;
+}
+
+sub {
+  font-family: inherit;
+  top: .5ex;
+}
+
+small {
+  font-family: inherit;
+  font-size: 75%;
+}
+
+big {
+  font-family: inherit;
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+| 02.02 Forms
+--------------------------------------------------------------*/
+button,
+.button,
+input,
+select,
+textarea {
+  font-size: 100%; /* Corrects font size not being inherited in all browsers */
+  margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0; /* Addresses excess padding in IE8/9 */
+
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+  -webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing:    content-box;
+  box-sizing:         content-box;
+}
+
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  border: 1px solid;
+}
+
+
+/*--------------------------------------------------------------
+| 02.03 Links
+--------------------------------------------------------------*/
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+| 02.04 Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+#comment {
+}
+
+#submit {
+}
+
+.comment-metadata, .comment-metadata a, .comment-content,.comment-author, .fn, .comment-form-author {
+}
+
+/*--------------------------------------------------------------
+| 02.05 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.wp-caption-text {
+  font-style: normal;
+  font-weight: 600;
+}
+
+ul li {
+}
+ol li {
+}
+th, thead {
+}
+td {
+}
+
+/*--------------------------------------------------------------
+| 02.06 Sidebar
+--------------------------------------------------------------*/
+
+.widget-area, .input.search-field {
+}
+
+.widget_recent_entries ul , .widget_recent_entries a, .widget-title {
+}
+
+/*--------------------------------------------------------------
+| 02.07 Meta
+--------------------------------------------------------------*/
+
+.post-date {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.icons, [class^="fi-"], [class^="fi "] {
+}
+
+/*--------------------------------------------------------------
+| 03.00 Header
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+| 04.00 Navigation
+--------------------------------------------------------------*/
+/*  04.01 Primary Nav
+--------------------------------------------------------------*/
+
+nav {
+  list-style: none;
+  display: table;
+}
+
+.menu-main-menu-container {
+  margin: -8em 0 9em 0 !important;
+}
+
+.menu-main-menu-container a {
+  display: block;
+  width: 10em;
+  text-decoration: none;
+}
+.menu-main-menu-container li {
+  float: left;
+  width: 10em;
+  text-align: center;
+  margin: 0 .25em 0 .25em;
+  display: table-cell;
+  @media (min-width:1025px) and (max-width: 1395px) {
+    margin: 0 !important;
+  }
+}
+
+.menu-item {
+  padding: 2em;
+  @media (min-width:1025px) and (max-width: 1395px) {
+    padding:1em;
+    a {
+      letter-spacing: 1px !important;
+      font-size: em-calc(15.5) !important;
+    }
+  }
+  a {
+    font-family: $font1;
+    text-transform: uppercase;
+    font-size: em-calc(19);
+    font-style: normal;
+    letter-spacing: 1.75px;
+    font-weight: 300;
+    color: $color1;
+    &:hover {
+      color: $color2;
+    }
+  }
+}
+
+.current-menu-item a {
+  color: $color2;
+  font-weight: 400;
+}
+
+.menu-main-menu-container a, .menu-main-menu-container li {
+  width: auto;
+  padding: .25em .75em;
+
+  @media (min-width:1025px) and (max-width: 1395px) {
+    padding: .25em .35em !important;
+  }
+}
+
+.menu-main-menu-container li:hover ul {
+  left: auto;
+  display: block;
+}
+
+.menu-primary-left-container, .menu-primary-right-container {
+  border-bottom: 1px solid $color1;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  .sub-menu a {
+    font-family: $font2;
+    font-size: em-calc(16);
+    text-transform: lowercase;
+    font-weight: 200;
+  }
+}
+
+.menu-primary-right-container {
+  float: left;
+}
+
+.menu-primary-left-container {
+  float: right;
+}
+
+/*--------------------------------------------------------------
+  04.01.01 Sub Nav
+--------------------------------------------------------------*/
+.sub-menu {
+  z-index:100;
+  margin-left: 0.25em !important;
+}
+
+.menu-main-menu-container li li {
+  white-space: nowrap;
+}
+.menu-main-menu-container li ul {
+  position: absolute;
+  display: none;
+  left: -999em;
+  width: auto;
+  padding: .25em;
+}
+.menu-main-menu-container li ul li {
+  min-width: 100%;
+  text-align: left;
+  margin: 0 0 0 0;
+  //  background-color: $color2;
+
+  padding: 0 .25em !important;
+  a {
+    padding: 0 .25em !important;
+    &:hover {
+      color: $color3;
+    }
+  }
+}
+.menu-main-menu-container li ul li:first-of-type {
+  margin-top: .5em;
+}
+.inner-wrap {
+  // Control Height of Sidebar Menu
+  height: 100%;
+}
+
+.left {
+  list-style: none !important;
+}
+
+a.menu-icon span {
+  box-shadow: 0 10px 0 1px $color3, 0 16px 0 1px $color3, 0 22px 0 1px $color3;
+}
+
+.left-off-canvas-menu, .left-submenu {
+  background-color: white !important;
+  .menu-item {
+    padding: .5em;
+  }
+  li {
+    text-align: left !important;
+  }
+}
+
+.back a {
+  background-color: white !important;
+}
+
+/*--------------------------------------------------------------
+  04.02 Vertical Menu
+--------------------------------------------------------------*/
+.vertical-menu-container, .menu-main-menu-container ul {
+  padding: 0;
+  margin: auto;
+  list-style: none;
+  display: table;
+}
+
+.vertical-menu-container a {
+  display: block;
+  width: 10em;
+  text-decoration: none;
+}
+
+.vertical-menu-container li ul {
+  position: absolute;
+  display: none;
+  width: 10em;
+  position: relative;
+}
+/*--------------------------------------------------------------
+  04.02.01 Vertical Sub Menu
+--------------------------------------------------------------*/
+.vertical-menu-container a, .vertical-menu-container li, .vertical-menu-container li ul {
+  width: auto;
+  padding: .25em;
+}
+.vertical-menu-container li {
+  position: relative;
+}
+.vertical-menu-container li li {
+
+  white-space: nowrap;
+}
+.vertical-menu-container li ul {
+  min-width: 100%;
+}
+.vertical-menu-container li ul li {
+  min-width: 100%;
+  text-align: left;
+  margin: 0 0 0 0;
+  //  background-color: $color2;
+}
+#accordion.vertical-menu-container {
+  width: 100%;
+}
+/*------------------------------*/
+
+.inner-wrap {
+  // Control Height of Sidebar Menu
+  height: 100%;
+}
+
+.active {
+  //  border-bottom: 2px solid black;
+}
+
+
+/*--------------------------------------------------------------
+| 05.00 Site Wide Elements
+|  All classes prefixed with .swe-
+--------------------------------------------------------------*/
+
+.pg-middle-img {
+  @media #{$medium-up} {
+    width: 48%;
+    height:500px !important;
+    margin-left: 1%;
+    background-position: center;
+  }
+  @media #{$small-only} {
+    background-position: center;
+    height:300px;
+  }
+}
+
+/*--------------------------------------------------------------
+| 06.0 Splash Page
+|   All classes prefixed with .spl-
+--------------------------------------------------------------*/
+.page-template-splash {
+  //  .page-template-splash name provided from Wordpress - DO NOT CHANGE
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.spl-content {
+  margin-top: 25%;
+
+  h1 {
+    color: White;
+    font-size: em-calc(35);
+    font-weight: 300 !important;
+    letter-spacing: 1px;
+  }
+  a {
+    color: white;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: .5em;
+    letter-spacing: 1px;
+  }
+}
+
+/*--------------------------------------------------------------
+| 06.0 Home Page
+|   All classes prefixed with .hpg-
+--------------------------------------------------------------*/
+
+.hpg-gal {
+  margin-top: 8em !important;
+  margin-bottom: 2em !important;
+}
+
+/*--------------------------------------------------------------
+| 08.0 Info A Page
+|   All classes prefixed with .ipa-
+--------------------------------------------------------------*/
+
+.ipa-title {
+  margin-right: .5em;
+  h1, h2 {
+    display: inline-block;
+  }
+  h1 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.ipa-title-menu {
+  margin-right: .5em;
+  display: inline-block;
+  h1, h2 {
+    display: inline-block;
+  }
+  h1 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.print {
+  display: inline-block;
+}
+
+.ipa-aside {
+  padding: 0 3em !important;
+  @media #{$large-up} {
+    text-align: right;
+  }
+  @media #{$small-only}  {
+    text-align: center;
+  }
+  p {
+    font-family: $font2 !important;
+    font-size: em-calc(17) !important;
+    line-height: 1.5 !important;
+    text-transform: uppercase;
+    color: $color1;
+    font-weight: 300;
+  }
+}
+
+/*--------------------------------------------------------------
+| 09.0 Info B Page
+|   All classes prefixed with .ipb-
+--------------------------------------------------------------*/
+
+.ipb-content {
+  @media #{$small-only} {
+    padding: 2em 0;
+  }
+}
+
+.ipb-title {
+  @media #{$large-up} {
+    text-align: right;
+  }
+  @media #{$small-only} {
+    text-align: center;
+  }
+}
+
+
+/*--------------------------------------------------------------
+| FEEDER
+|   All classes prefixed with .fdr-
+--------------------------------------------------------------*/
+
+.fdr-row {
+  @media #{$medium-up} {
+    display: flex !important;
+    align-items: center !important;
+    margin: 5em 0 !important;
+  }
+}
+
+.fdr {
+  position: relative;
+  h1 {
+    font-size: em-calc(17);
+  }
+   a p {
+    font-size: em-calc(15);
+     text-transform: none !important;
+  }
+}
+
+.fdr-hover {
+  background-color: white;
+  top: 0;
+  height: 100%;
+
+
+  @media #{$large-up} {
+    padding-top: 12% !important;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: none;
+    width: 97% !important;
+    position: absolute;
+  }
+
+  .fdr-read-more {
+    padding-right: 0 !important;
+  }
+}
+
+.fdr:hover {
+  .fdr-hover {
+    display: block;
+  }
+}
+/*--------------------------------------------------------------
+| blog feeder page
+|   All classes prefixed with .bfp-
+--------------------------------------------------------------*/
+
+.featured-post-content {
+  @media #{$medium-up} {
+    padding: 7em 2em 0 2em !important;
+  }
+  a {
+    text-transform: none;
+  }
+  .fdr-read-more {
+    text-transform: uppercase;
+  }
+  p {
+    @media #{$large-up} {
+      padding: 0 0 0 6em !important;
+    }
+  }
+  @media #{$small-only} {
+    background-color: white;
+    padding:1em !important;
+  }
+}
+
+#container{
+  width: 1200px;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#parent {
+  width:2000px;
+}
+.contentBlock {
+  position: relative;
+  padding: 0 .5em;
+  float: left;
+  @media #{$small-only} {
+    width: 200px;
+  }
+  @media #{$medium-up} {
+  width: 350px;
+}
+  h1 {
+    font-size: em-calc(13);
+  }
+  p {
+    text-transform: lowercase;
+    font-size: em-calc(11);
+  }
+  a {
+    padding: 0 !important;
+  }
+  .read-more {
+    font-size: em-calc(11);
+    float: right;
+  }
+}
+
+.contentBlock:hover {
+  .block-hover {
+    display: block;
+  }
+}
+
+.panner {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  font-size: 2em;
+  margin-top: 2.5em;
+}
+#panLeft {
+  @media #{$large-up} {
+    left: 15%;
+  }
+  @media #{$small-only} {
+    left: 0%;
+  }
+}
+#panRight {
+  @media #{$large-up} {
+    right: 14%;
+  }
+  @media #{$small-only} {
+    right: -3%;
+  }
+  right: -26px;
+}
+
+.block-hover {
+  background-color: white;
+  width: 101%;
+  height: 100%;
+
+  @media #{$large-up} {
+    display: none;
+    padding: .75em;
+    top: 0;
+    position: absolute;
+  }
+}
+
+.spg-date{
+  font-family: $font2;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: em-calc(15);
+}
+
+.spg-content {
+  @media #{$small-only} {
+    margin-top: 1em;
+  }
+}
+
+/*--------------------------------------------------------------
+| 14.0 Form
+|   All classes prefixed with .frm-
+--------------------------------------------------------------*/
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+  box-shadow: none !important;
+  border-bottom: 1px solid $color1 !important;
+  border: none;
+  margin-bottom: 0 !important;
+}
+
+.gform_wrapper {
+  margin-top: 0 !important;
+}
+
+#gform_submit_button_1 {
+  border: none !important;
+  background-color: transparent !important;
+  text-transform: uppercase;
+  font-family: $font1;
+  font-weight: 600;
+  float: right;
+  &:hover {
+    color: $color2;
+  }
+}
+
+#input_1_5_3, #input_1_6, #input_1_8 {
+  box-shadow: none !important;
+  border-bottom: 1px solid $color1 !important;
+  border: none;
+  margin-bottom: 0 !important;
+}
+
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+  display: none !important;
+}
+
+.frm-aside {
+  text-align: right;
+  @media #{$small-only} {
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
+| LISTING
+--------------------------------------------------------------*/
+
+.menu-listing hr:last-of-type {
+  display: none;
+}
+
+.menu-item-title {
+  @media #{$small-only} {
+    text-align: center !important;
+  }
+}
+
+.menu-item-row h3 {
+  font-size: em-calc(18);
+  @media #{$small-only} {
+    margin-bottom: -.75em !important;
+    margin-top: .25em;
+  }
+}
+
+.menu-item-row p {
+  font-size: em-calc(16);
+}
+
+
+.menu-item-title h1 {
+  font-size: em-calc(19);
+}
+
+/*--------------------------------------------------------------
+| 15.0 Gallery Page
+|   All classes prefixed with .gal-
+--------------------------------------------------------------*/
+
+.gal {
+  p {
+    @media #{$medium-up} {
+      margin: 0 10em;
+    }
+    @media #{$small-only} {
+      margin: 0 1em;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+| 16.0 Footer
+|   All classes prefixed with .ftr-
+--------------------------------------------------------------*/
+
+.ftr {
+  border-top: 1px solid $color1;
+  padding-top: 1em;
+}
+
+.ftr-row {
+  padding-left: 8em;
+}
+
+.ftr-title {
+  h1, h2 {
+    display: inline-block !important;
+  }
+  h1 {
+    font-size: em-calc(21);
+  }
+  border-bottom: 1px solid;
+  margin-bottom: 1.5em !important;
+}

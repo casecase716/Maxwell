@@ -1,0 +1,412 @@
+/*--------------------------------------------------------------
+| Table of Contents
+|
+| 01.00   SCSS Imports
+|
+| 02.00   Site Wide Definitions
+| 02.01   Typography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+| 01.00 SCSS Imports
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+| Table of Contents
+|
+| 01.00   Typography
+|
+| 02.00   Forms
+|
+| 03.00   Links
+|
+| 04.00   Wordpress Alignments
+|
+| 05.00   Comments
+|
+| 06.00   Captions
+|
+| 07.00   Sidebar
+|
+| 08.00   Meta
+|
+| 09.00   Butter Pages Footer
+|
+| 10.00   Menu
+--------------------------------------------------------------*/
+/**
+ * Custom variables
+ * ----------------------------------------------------------------------------
+ */
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600|Oswald);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+  font-family: "Crimson Text";
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "Crimson Text";
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: "Crimson Text";
+  font-weight: 600;
+  font-style: bold; }
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400; }
+/*--------------------------------------------------------------
+| 1.0 - Typography
+--------------------------------------------------------------*/
+h1 {
+  font-family: "Crimson Text";
+  color: #B88753; }
+
+h2 {
+  font-family: "Crimson Text";
+  color: #B88753; }
+
+h3 {
+  font-family: "Crimson Text";
+  color: #7EAECF; }
+
+h4 {
+  font-family: "Crimson Text";
+  color: #7EAECF; }
+
+h5 {
+  font-family: "Crimson Text";
+  color: #7EAECF; }
+
+h6 {
+  font-family: "Crimson Text";
+  color: #7EAECF; }
+
+hr {
+  color: #191A0D; }
+
+.backgroundcolor {
+  background-color: #FFFAF4; }
+
+p,
+pre,
+code,
+kbd,
+tt,
+var,
+abbr,
+acronym,
+address,
+mark,
+ins,
+dfn,
+cite {
+  font-family: "Crimson Text";
+  color: #191A0D; }
+
+em,
+i {
+  font-family: "Crimson Text";
+  color: #191A0D; }
+
+b,
+strong {
+  font-family: inherit;
+  color: #191A0D; }
+
+blockquote {
+  font-family: inherit;
+  color: #191A0D; }
+
+sup,
+sub {
+  font-family: "Crimson Text";
+  position: relative;
+  vertical-align: baseline;
+  color: #191A0D; }
+
+sup {
+  font-family: inherit;
+  color: #191A0D; }
+
+sub {
+  font-family: inherit;
+  color: #191A0D; }
+
+small {
+  font-family: inherit;
+  color: #191A0D; }
+
+big {
+  font-family: inherit;
+  color: #191A0D; }
+
+/*--------------------------------------------------------------
+| 2.0 Forms
+--------------------------------------------------------------*/
+button,
+.button,
+input,
+select,
+textarea {
+  color: #191A0D;
+  background-color: #FFFAF4;
+  font-family: "Crimson Text"; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: #191A0D;
+  background-color: #FFFAF4;
+  font-family: "Crimson Text"; }
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #191A0D;
+  color: #FFFAF4;
+  font-family: "Crimson Text"; }
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+input[type="search"] {
+  background-color: #FFFAF4;
+  font-family: "Crimson Text"; }
+
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  background-color: #FFFAF4;
+  font-family: "Crimson Text"; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  background-color: #FFFAF4;
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+/*--------------------------------------------------------------
+| 3.0 Links
+--------------------------------------------------------------*/
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  font-family: "Crimson Text";
+  color: #7EAECF; }
+
+/*--------------------------------------------------------------
+| 4.0 Wordpress Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto; }
+
+/*--------------------------------------------------------------
+| 5.0 Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+.bypostauthor {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+#comment {
+  background-color: #FFFAF4;
+  font-family: "Crimson Text"; }
+
+#submit {
+  background-color: #FFFAF4;
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+.comment-metadata, .comment-metadata a, .comment-content, .comment-author, .fn, .comment-form-author {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+/*--------------------------------------------------------------
+| 6.0 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  font-family: "Crimson Text";
+  color: #B88753;
+  background-color: #FFFAF4; }
+
+.wp-caption-text {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+ul li {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+ol li {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+th, thead {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+td {
+  color: #191A0D;
+  font-family: "Crimson Text"; }
+
+/*--------------------------------------------------------------
+| 7.0 Sidebar
+--------------------------------------------------------------*/
+.widget-area, .input.search-field {
+  background-color: #FFFAF4;
+  font-family: "Crimson Text"; }
+
+.widget_recent_entries ul, .widget_recent_entries a, .widget-title {
+  color: #B88753;
+  font-family: "Crimson Text"; }
+
+/*--------------------------------------------------------------
+|8.0 Meta
+--------------------------------------------------------------*/
+.post-date {
+  font-family: "Crimson Text";
+  color: #191A0D; }
+
+.icons, [class^="fi-"], [class^="fi "] {
+  color: #7EAECF !important; }
+
+/*--------------------------------------------------------------
+| 9.0 BUTTER PAGES FOOTER
+--------------------------------------------------------------*/
+.butterpagesfooter,
+.butterpagesfooter a {
+  font-family: "Montserrat";
+  font-size: em-calc(15);
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+  color: #ffffff; }
+
+/*--------------------------------------------------------------
+| Menu
+--------------------------------------------------------------*/
+/*  Main Menu
+--------------------------------------------------------------*/
+.menu-item, .current-menu-item, .current_page_item {
+  font-family: "Crimson Text"; }
+
+/*  Sub-Menu
+--------------------------------------------------------------*/
+.sub-menu, .menu-item, .current-menu-item, .current_page_item {
+  font-family: "Crimson Text"; }
+
+/*-------------------------------------
+| Navigation
+-------------------------------------*/
+/* Original Son of Suckerfish Styles */
+/* Style Overrides for Fluid-width Dropdowns */
+.menu-main-menu-container li ul li {
+  background-color: #B88753; }
+
+/* Vertical Menu Container
+===========================*/
+/* Style Overrides for Fluid-width Dropdowns */
+.vertical-menu-container li ul li {
+  background-color: #B88753; }
+
+/*------------------------------*/
+.inner-wrap {
+  height: 100%; }
+
+/*--------------------------------------------------------------
+| 02.01 Typography copy from the style.scss file
+--------------------------------------------------------------*/
+h1 {
+  font-style: normal; }
+
+h2 {
+  font-style: normal; }
+
+h3 {
+  font-style: normal; }
+
+h4 {
+  font-style: normal; }
+
+h5 {
+  font-style: normal; }
+
+h6 {
+  font-style: normal; }
+
+em,
+i {
+  font-style: italic; }
+
+b,
+strong {
+  font-family: inherit;
+  font-weight: 600; }
+
+blockquote {
+  font-family: inherit;
+  margin: 0 1.5em; }
+
+sup,
+sub {
+  font-style: normal;
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  font-family: inherit;
+  bottom: 1ex; }
+
+sub {
+  font-family: inherit;
+  top: .5ex; }
